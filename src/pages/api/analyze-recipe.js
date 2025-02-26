@@ -47,9 +47,9 @@ ${recipe}
 
     console.log('API 요청 준비 완료');
     
-    // OpenAI API 호출 (최신 방식)
+    // OpenAI API 호출 (gpt-4o-mini 모델 사용)
     const completion = await openai.chat.completions.create({
-      model: "gpt-3.5-turbo",
+      model: "gpt-4o-mini",  // gpt-3.5-turbo에서 gpt-4o-mini로 변경
       messages: [
         { "role": "system", "content": "당신은 레시피 분석 및 칼로리 계산을 전문으로 하는 영양사입니다. 정확한 수치와 JSON 형식으로 답변해주세요." },
         { "role": "user", "content": prompt }
