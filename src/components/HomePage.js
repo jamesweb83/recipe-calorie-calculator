@@ -3,7 +3,6 @@ import { useState } from 'react';
 import axios from 'axios';
 import styles from '../styles/Home.module.css';
 import { useLanguage } from '../contexts/LanguageContext';
-import LanguageSwitcher from './LanguageSwitcher';
 import SEOHead from './SEOHead';
 
 export default function HomePage() {
@@ -43,8 +42,6 @@ export default function HomePage() {
       <SEOHead />
 
       <main className={styles.main}>
-        <LanguageSwitcher />
-        
         <h1 className={styles.title}>
           {texts.title}
         </h1>
