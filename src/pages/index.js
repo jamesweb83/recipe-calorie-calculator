@@ -53,66 +53,65 @@ export default function Home() {
                 value={recipe}
                 onChange={(e) => setRecipe(e.target.value)}
                 placeholder="예시:
-
-
 쌀 2컵
 닭가슴살 200g
 양파 1개
 당근 1개
 간장 2큰술"
-rows={8}
-/>
-</div>
-Copy           {error && <p className={styles.error}>{error}</p>}
-           
-           <button
-             type="submit"
-             disabled={loading}
-             className={styles.button}
-           >
-             {loading ? '계산 중...' : '칼로리 계산하기'}
-           </button>
-         </form>
-       </div>
-       
-       {loading && (
-         <div className={styles.loading}>
-           <p>GPT를 통해 레시피를 분석 중입니다...</p>
-         </div>
-       )}
-       
-       {result && !loading && (
-         <div className={styles.result}>
-           <h2>총 칼로리: {result.totalCalories} kcal</h2>
-           
-           <h3>재료별 칼로리:</h3>
-           <table className={styles.table}>
-             <thead>
-               <tr>
-                 <th>재료</th>
-                 <th>양</th>
-                 <th>그램</th>
-                 <th>칼로리</th>
-               </tr>
-             </thead>
-             <tbody>
-               {result.ingredients.map((ing, index) => (
-                 <tr key={index}>
-                   <td>{ing.name}</td>
-                   <td>{ing.quantity} {ing.unit}</td>
-                   <td>{ing.grams}g</td>
-                   <td>{ing.calories} kcal</td>
-                 </tr>
-               ))}
-             </tbody>
-           </table>
-           
-           <div className={styles.disclaimer}>
-             <p>※ 이 계산은 근사치이며, 실제 값은 재료의 정확한 종류와 조리 방법에 따라 달라질 수 있습니다.</p>
-           </div>
-         </div>
-       )}
-     </main>
-   </div>
- );
+                rows={8}
+              />
+            </div>
+            
+            {error && <p className={styles.error}>{error}</p>}
+            
+            <button
+              type="submit"
+              disabled={loading}
+              className={styles.button}
+            >
+              {loading ? '계산 중...' : '칼로리 계산하기'}
+            </button>
+          </form>
+        </div>
+        
+        {loading && (
+          <div className={styles.loading}>
+            <p>GPT를 통해 레시피를 분석 중입니다...</p>
+          </div>
+        )}
+        
+        {result && !loading && (
+          <div className={styles.result}>
+            <h2>총 칼로리: {result.totalCalories} kcal</h2>
+            
+            <h3>재료별 칼로리:</h3>
+            <table className={styles.table}>
+              <thead>
+                <tr>
+                  <th>재료</th>
+                  <th>양</th>
+                  <th>그램</th>
+                  <th>칼로리</th>
+                </tr>
+              </thead>
+              <tbody>
+                {result.ingredients.map((ing, index) => (
+                  <tr key={index}>
+                    <td>{ing.name}</td>
+                    <td>{ing.quantity} {ing.unit}</td>
+                    <td>{ing.grams}g</td>
+                    <td>{ing.calories} kcal</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+            
+            <div className={styles.disclaimer}>
+              <p>※ 이 계산은 근사치이며, 실제 값은 재료의 정확한 종류와 조리 방법에 따라 달라질 수 있습니다.</p>
+            </div>
+          </div>
+        )}
+      </main>
+    </div>
+  );
 }
