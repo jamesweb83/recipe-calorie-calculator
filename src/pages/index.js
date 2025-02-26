@@ -1,9 +1,14 @@
+// src/pages/index.js
 import { useState } from 'react';
 import Head from 'next/head';
 import axios from 'axios';
 import styles from '../styles/Home.module.css';
+import { LanguageProvider, useLanguage } from '../contexts/LanguageContext';
+import LanguageSwitcher from '../components/LanguageSwitcher';
 
-export default function Home() {
+// 언어 컨텍스트 사용하는 메인 앱 컴포넌트
+function RecipeCalculator() {
+  const { texts, language } = useLanguage();
   const [recipe, setRecipe] = useState('');
   const [result, setResult] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -13,7 +18,7 @@ export default function Home() {
     e.preventDefault();
     
     if (!recipe.trim()) {
-      setError('레시피를 입력해주세요.');
+      setError(texts.enterRecipe);
       return;
     }
     
@@ -21,11 +26,14 @@ export default function Home() {
     setError('');
     
     try {
-      const response = await axios.post('/api/analyze-recipe', { recipe });
+      const response = await axios.post('/api/analyze-recipe', { 
+        recipe,
+        language // 현재 언어 전달
+      });
       setResult(response.data);
     } catch (err) {
       console.error('Error:', err);
-      setError(err.response?.data?.error || '분석 중 오류가 발생했습니다.');
+      setError(err.response?.data?.error || (language === 'ko' ? '분석 중 오류가 발생했습니다.' : 'An error occurred during analysis.'));
     } finally {
       setLoading(false);
     }
@@ -34,30 +42,27 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>레시피 칼로리 계산기</title>
-        <meta name="description" content="GPT를 활용한 레시피 칼로리 계산기" />
+        <title>{texts.title}</title>
+        <meta name="description" content={texts.description} />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main className={styles.main}>
+        <LanguageSwitcher />
+        
         <h1 className={styles.title}>
-          레시피 칼로리 계산기
+          {texts.title}
         </h1>
         
         <div className={styles.formContainer}>
           <form onSubmit={handleSubmit}>
             <div className={styles.formGroup}>
-              <label htmlFor="recipe">레시피 재료와 양을 입력하세요:</label>
+              <label htmlFor="recipe">{texts.recipeLabel}</label>
               <textarea
                 id="recipe"
                 value={recipe}
                 onChange={(e) => setRecipe(e.target.value)}
-                placeholder="예시:
-쌀 2컵
-닭가슴살 200g
-양파 1개
-당근 1개
-간장 2큰술"
+                placeholder={texts.placeholder}
                 rows={8}
               />
             </div>
@@ -69,29 +74,29 @@ export default function Home() {
               disabled={loading}
               className={styles.button}
             >
-              {loading ? '계산 중...' : '칼로리 계산하기'}
+              {loading ? texts.buttonCalculating : texts.buttonCalculate}
             </button>
           </form>
         </div>
         
         {loading && (
           <div className={styles.loading}>
-            <p>GPT를 통해 레시피를 분석 중입니다...</p>
+            <p>{texts.analyzingRecipe}</p>
           </div>
         )}
         
         {result && !loading && (
           <div className={styles.result}>
-            <h2>총 칼로리: {result.totalCalories} kcal</h2>
+            <h2>{texts.totalCalories} {result.totalCalories} kcal</h2>
             
-            <h3>재료별 칼로리:</h3>
+            <h3>{texts.ingredientCalories}</h3>
             <table className={styles.table}>
               <thead>
                 <tr>
-                  <th>재료</th>
-                  <th>양</th>
-                  <th>그램</th>
-                  <th>칼로리</th>
+                  <th>{texts.ingredient}</th>
+                  <th>{texts.quantity}</th>
+                  <th>{texts.grams}</th>
+                  <th>{texts.calories}</th>
                 </tr>
               </thead>
               <tbody>
@@ -107,11 +112,20 @@ export default function Home() {
             </table>
             
             <div className={styles.disclaimer}>
-              <p>※ 이 계산은 근사치이며, 실제 값은 재료의 정확한 종류와 조리 방법에 따라 달라질 수 있습니다.</p>
+              <p>{texts.disclaimer}</p>
             </div>
           </div>
         )}
       </main>
     </div>
+  );
+}
+
+// 페이지 컴포넌트 - 언어 제공자로 래핑
+export default function Home() {
+  return (
+    <LanguageProvider>
+      <RecipeCalculator />
+    </LanguageProvider>
   );
 }
