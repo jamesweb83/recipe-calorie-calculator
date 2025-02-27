@@ -10,9 +10,10 @@ export default {
     extend: {
       colors: {
         background: "var(--background)",
-        fontFamily: {
-          sans: ['Noto Sans', 'Noto Sans KR', 'sans-serif'],
         foreground: "var(--foreground)",
+      },
+      fontFamily: {
+        sans: ['Noto Sans', 'Noto Sans KR', 'sans-serif'],
       },
     },
   },
