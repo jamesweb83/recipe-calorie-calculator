@@ -1,7 +1,7 @@
 // src/utils/translations.js
 const translations = {
   en: {
-    title: 'AI Recipe Calorie Calculator',
+    title: 'Recipe Calorie Calculator',
     description: 'Calculate calories for your recipe ingredients',
     recipeLabel: 'Enter your recipe ingredients and quantities:',
     placeholder: `Example:
@@ -9,11 +9,12 @@ Rice 2 cups
 Chicken breast 200g
 Onion 1
 Carrot 1
-Soy sauce 2 tbsp`,
+Soy sauce 2 tbsp
+(or 1 pizza)`,
     buttonCalculate: 'Calculate Calories',
     buttonCalculating: 'Calculating...',
     enterRecipe: 'Please enter a recipe.',
-    analyzingRecipe: 'Analyzing recipe through AI...',
+    analyzingRecipe: 'Analyzing recipe...',
     totalCalories: 'Total Calories:',
     ingredientCalories: 'Calories by Ingredient:',
     ingredient: 'Ingredient',
@@ -25,19 +26,20 @@ Soy sauce 2 tbsp`,
     maxCharError: 'Recipe cannot exceed 300 characters.' // 추가된 오류 메시지
   },
   ko: {
-    title: 'AI 레시피 칼로리 계산기',
-    description: 'AI를 활용한 레시피 칼로리 계산기',
-    recipeLabel: '레시피 재료와 양을 입력하세요:',
+    title: '레시피 칼로리 계산기',
+    description: '레시피를 넣으면 칼로리를 계산해드려요.',
+    recipeLabel: '레시피 재료와 양을 입력하세요. 혹은 레시피 이름만 넣어주세요.:',
     placeholder: `예시:
 쌀 2컵
 닭가슴살 200g
 양파 1개
 당근 1개
-간장 2큰술`,
+간장 2큰술
+(혹은 라지 피자 1판)`,
     buttonCalculate: '칼로리 계산하기',
     buttonCalculating: '계산 중...',
     enterRecipe: '레시피를 입력해주세요.',
-    analyzingRecipe: 'AI를 통해 레시피를 분석 중입니다...',
+    analyzingRecipe: '레시피를 분석 중입니다...',
     totalCalories: '총 칼로리:',
     ingredientCalories: '재료별 칼로리:',
     ingredient: '재료',
