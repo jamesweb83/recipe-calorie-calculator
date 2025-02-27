@@ -5,12 +5,25 @@ import styles from '../styles/Home.module.css';
 import { useLanguage } from '../contexts/LanguageContext';
 import SEOHead from './SEOHead';
 
+// 최대 문자 수 상수 정의
+const MAX_CHARS = 300;
+
 export default function HomePage() {
   const { texts, language } = useLanguage();
   const [recipe, setRecipe] = useState('');
+  const [charCount, setCharCount] = useState(0);
   const [result, setResult] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
+
+  // 텍스트 입력 처리 함수
+  const handleRecipeChange = (e) => {
+    const input = e.target.value;
+    if (input.length <= MAX_CHARS) {
+      setRecipe(input);
+      setCharCount(input.length);
+    }
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -53,10 +66,14 @@ export default function HomePage() {
               <textarea
                 id="recipe"
                 value={recipe}
-                onChange={(e) => setRecipe(e.target.value)}
+                onChange={handleRecipeChange}
                 placeholder={texts.placeholder}
                 rows={8}
+                maxLength={MAX_CHARS}
               />
+              <div className={styles.charCounter}>
+                {charCount}/{MAX_CHARS} {texts.characters || '자'}
+              </div>
             </div>
             
             {error && <p className={styles.error}>{error}</p>}
