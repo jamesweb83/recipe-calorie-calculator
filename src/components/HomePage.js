@@ -4,6 +4,8 @@ import axios from 'axios';
 import styles from '../styles/Home.module.css';
 import { useLanguage } from '../contexts/LanguageContext';
 import SEOHead from './SEOHead';
+import Navigation from './Navigation';
+import Footer from './Footer';
 
 // 최대 문자 수 상수 정의
 const MAX_CHARS = 300;
@@ -51,8 +53,9 @@ export default function HomePage() {
   };
   
   return (
-    <div className={styles.container}>
+    <div>
       <SEOHead />
+      <Navigation />
 
       <main className={styles.main}>
         <h1 className={styles.title}>
@@ -126,6 +129,8 @@ export default function HomePage() {
           </div>
         )}
       </main>
+
+      <Footer />
     </div>
   );
 }

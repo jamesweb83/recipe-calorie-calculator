@@ -1,17 +1,31 @@
 // src/components/SEOHead.js
-import Head from 'next/head'; // 이 줄을 추가해주세요
+import Head from 'next/head';
+import { useRouter } from 'next/router';
 import { useLanguage } from '../contexts/LanguageContext';
 
 export default function SEOHead() {
   const { texts, language } = useLanguage();
+  const router = useRouter();
   
   // 웹사이트 기본 정보
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://recipe-calorie-calculator.vercel.app';
   const siteName = 'Recipe Calorie Calculator';
   
-  // 언어별 타이틀, 설명
-  const seoTitle = texts.title || 'Recipe Calorie Calculator';
-  const seoDescription = texts.description || 'Calculate calories for your recipe ingredients';
+  // 현재 페이지에 따른 타이틀 및 설명 설정
+  let seoTitle = texts.title;
+  let seoDescription = texts.description;
+  
+  // 현재 URL 경로에 따라 메타 데이터 조정
+  if (router.pathname === '/faq') {
+    seoTitle = `${texts.faq} - ${texts.title}`;
+    seoDescription = `${texts.frequentlyAskedQuestions} ${texts.description}`;
+  } else if (router.pathname === '/privacy-policy') {
+    seoTitle = `${texts.privacyPolicy} - ${texts.title}`;
+    seoDescription = `${texts.privacyPolicyTitle} ${texts.title}`;
+  }
+  
+  // 현재 전체 URL
+  const canonicalUrl = `${baseUrl}${router.pathname}`;
   
   // OG 이미지 URL
   const ogImageUrl = `${baseUrl}/og-image.jpg`;
@@ -20,8 +34,8 @@ export default function SEOHead() {
   const structuredData = {
     '@context': 'https://schema.org',
     '@type': 'WebApplication',
-    'name': seoTitle,
-    'description': seoDescription,
+    'name': texts.title,
+    'description': texts.description,
     'applicationCategory': 'HealthApplication',
     'operatingSystem': 'Web',
     'offers': {
@@ -46,11 +60,11 @@ export default function SEOHead() {
       
       {/* 언어 설정 */}
       <meta httpEquiv="content-language" content={language} />
-      <link rel="canonical" href={baseUrl} />
+      <link rel="canonical" href={canonicalUrl} />
       
       {/* 오픈 그래프 태그 */}
       <meta property="og:type" content="website" />
-      <meta property="og:url" content={baseUrl} />
+      <meta property="og:url" content={canonicalUrl} />
       <meta property="og:title" content={seoTitle} />
       <meta property="og:description" content={seoDescription} />
       <meta property="og:image" content={ogImageUrl} />
