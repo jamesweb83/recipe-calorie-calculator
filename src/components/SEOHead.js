@@ -27,7 +27,7 @@ export default function SEOHead() {
   // 현재 전체 URL
   const canonicalUrl = `${baseUrl}${router.pathname}`;
   
-  // OG 이미지 URL
+  // OG 이미지 URL - 절대 경로 사용
   const ogImageUrl = `${baseUrl}/og-image.jpg`;
   
   // 구조화된 데이터 (Schema.org)
@@ -43,6 +43,7 @@ export default function SEOHead() {
       'price': '0',
       'priceCurrency': 'USD'
     },
+    'image': ogImageUrl,
     'inLanguage': [
       language === 'ko' ? 'ko' : 'en'
     ]
@@ -68,6 +69,8 @@ export default function SEOHead() {
       <meta property="og:title" content={seoTitle} />
       <meta property="og:description" content={seoDescription} />
       <meta property="og:image" content={ogImageUrl} />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
       <meta property="og:site_name" content={siteName} />
       <meta property="og:locale" content={language === 'ko' ? 'ko_KR' : 'en_US'} />
       
