@@ -7,7 +7,7 @@ import Footer from '../../components/Footer';
 import SEOHead from '../../components/SEOHead';
 
 export default function BlogIndex() {
-  const { texts, language } = useLanguage();
+  const { language } = useLanguage(); // Remove unused 'texts'
   
   // Blog posts data
   const blogPosts = [
