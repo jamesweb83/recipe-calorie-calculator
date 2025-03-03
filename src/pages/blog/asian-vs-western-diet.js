@@ -286,9 +286,138 @@ export default function AsianVsWesternDiet() {
               <li><strong>{content.westernDietLabel}:</strong> {content.westernDietStaples}</li>
             </ul>
 
-            {/* The rest of the HTML structure remains unchanged */}
-            {/* Only showing essential parts for the fix */}
-            {/* ... */}
+            <h3 className="text-xl font-medium text-indigo-700 mt-6 mb-3">
+              {content.cookingMethodsTitle}
+            </h3>
+            <ul className="list-disc pl-6 mb-6">
+              <li><strong>{content.asianDietLabel}:</strong> {content.asianCookingMethods}</li>
+              <li><strong>{content.westernDietLabel}:</strong> {content.westernCookingMethods}</li>
+            </ul>
+
+            <h3 className="text-xl font-medium text-indigo-700 mt-6 mb-3">
+              {content.mealStructureTitle}
+            </h3>
+            <ul className="list-disc pl-6 mb-6">
+              <li><strong>{content.asianDietLabel}:</strong> {content.asianMealStructure}</li>
+              <li><strong>{content.westernDietLabel}:</strong> {content.westernMealStructure}</li>
+            </ul>
+
+            {/* Caloric Content Section */}
+            <h2 className="text-2xl font-semibold text-indigo-600 mt-12 mb-4">
+              {content.caloricContentTitle}
+            </h2>
+
+            <h3 className="text-xl font-medium text-indigo-700 mt-6 mb-3">
+              {content.stapleCarbohydratesTitle}
+            </h3>
+            <ul className="list-disc pl-6 mb-4">
+              <li>{content.whiteRiceCal}</li>
+              <li>{content.whiteBreadCal}</li>
+              <li>{content.noodlesCal}</li>
+              <li>{content.pastaCal}</li>
+            </ul>
+            <p className="mb-6">{content.carbohydratesNote}</p>
+
+            <h3 className="text-xl font-medium text-indigo-700 mt-6 mb-3">
+              {content.proteinSourcesTitle}
+            </h3>
+            <ul className="list-disc pl-6 mb-4">
+              <li>{content.tofuCal}</li>
+              <li>{content.fishCal}</li>
+              <li>{content.chickenCal}</li>
+              <li>{content.beefCal}</li>
+            </ul>
+            <p className="mb-6">{content.proteinNote}</p>
+
+            <h3 className="text-xl font-medium text-indigo-700 mt-6 mb-3">
+              {content.fatsOilsTitle}
+            </h3>
+            <ul className="list-disc pl-6 mb-4">
+              <li>{content.sesameOilCal}</li>
+              <li>{content.oliveOilCal}</li>
+              <li>{content.butterCal}</li>
+              <li>{content.coconutMilkCal}</li>
+            </ul>
+            <p className="mb-6">{content.fatsNote}</p>
+
+            {/* Daily Calorie Intake Section */}
+            <h2 className="text-2xl font-semibold text-indigo-600 mt-12 mb-4">
+              {content.dailyCalorieTitle}
+            </h2>
+            <p className="mb-4">{content.dailyCalorieIntro}</p>
+            <ul className="list-disc pl-6 mb-4">
+              <li><strong>{content.japanLabel}:</strong> {content.japanCalories}</li>
+              <li><strong>{content.chinaLabel}:</strong> {content.chinaCalories}</li>
+              <li><strong>{content.usLabel}:</strong> {content.usCalories}</li>
+              <li><strong>{content.ukLabel}:</strong> {content.ukCalories}</li>
+            </ul>
+            <p className="mb-6">{content.calorieExplanation}</p>
+
+            {/* Health Implications Section */}
+            <h2 className="text-2xl font-semibold text-indigo-600 mt-12 mb-4">
+              {content.healthImplicationsTitle}
+            </h2>
+
+            <h3 className="text-xl font-medium text-indigo-700 mt-6 mb-3">
+              {content.obesityRatesTitle}
+            </h3>
+            <ul className="list-disc pl-6 mb-4">
+              <li><strong>{content.eastAsianLabel}:</strong> {content.eastAsianObesity}</li>
+              <li><strong>{content.westernCountriesLabel}:</strong> {content.westernObesity}</li>
+            </ul>
+            <p className="mb-6">{content.obesityExplanation}</p>
+
+            <h3 className="text-xl font-medium text-indigo-700 mt-6 mb-3">
+              {content.nutrientDensityTitle}
+            </h3>
+            <p className="mb-4">{content.nutrientDensityIntro}</p>
+            <ul className="list-disc pl-6 mb-6">
+              <li>{content.vegetableConsumption}</li>
+              <li>{content.foodDiversity}</li>
+              <li>{content.lessProcessedFood}</li>
+            </ul>
+
+            {/* Modernization Section */}
+            <h2 className="text-2xl font-semibold text-indigo-600 mt-12 mb-4">
+              {content.modernizationTitle}
+            </h2>
+            <p className="mb-4">{content.modernizationIntro}</p>
+
+            <h3 className="text-xl font-medium text-indigo-700 mt-6 mb-3">
+              {content.westernizationTitle}
+            </h3>
+            <p className="mb-4">{content.westernizationText}</p>
+
+            <h3 className="text-xl font-medium text-indigo-700 mt-6 mb-3">
+              {content.asianInfluenceTitle}
+            </h3>
+            <p className="mb-6">{content.asianInfluenceText}</p>
+
+            {/* Practical Applications Section */}
+            <h2 className="text-2xl font-semibold text-indigo-600 mt-12 mb-4">
+              {content.practicalApplicationsTitle}
+            </h2>
+
+            <h3 className="text-xl font-medium text-indigo-700 mt-6 mb-3">
+              {content.asianCookingTechniquesTitle}
+            </h3>
+            <ul className="list-disc pl-6 mb-6">
+              <li>{content.wokTechnique}</li>
+              <li>{content.vegetableTechnique}</li>
+              <li>{content.portionTechnique}</li>
+              <li>{content.brothTechnique}</li>
+              <li>{content.proteinTechnique}</li>
+            </ul>
+
+            {/* Conclusion */}
+            <h2 className="text-2xl font-semibold text-indigo-600 mt-12 mb-4">
+              {content.conclusionTitle}
+            </h2>
+            <p className="mb-6">{content.conclusionText}</p>
+
+            <div className="bg-indigo-50 p-6 rounded-lg mt-8">
+              <p className="text-indigo-700 font-medium">{content.calculatorPromo}</p>
+            </div>
           </div>
         </article>
       </main>
