@@ -12,6 +12,15 @@ export default function BlogIndex() {
   // Blog posts data
   const blogPosts = [
     {
+      id: 'low-calorie-dinner-recipes',
+      title: language === 'ko' ? '다이어트를 위한 최고의 저칼로리 저녁 레시피' : 'The Best Low-Calorie Dinner Recipes for Weight Loss',
+      description: language === 'ko' 
+        ? '맛있고 만족스러운 저칼로리 저녁 레시피로 다이어트 목표를 달성하세요. 칼로리 계산과 요리 팁을 함께 제공합니다.' 
+        : 'Discover delicious and satisfying low-calorie dinner recipes that support your weight loss goals, complete with calorie counts and cooking tips.',
+      date: '2024-03-20',
+      formattedDate: language === 'ko' ? '2024년 3월 20일' : 'March 20, 2024'
+    },
+    {
       id: 'korean-food-on-diet',
       title: language === 'ko' ? '다이어트하면서 한식 즐기기: 맛있고 건강한 팁' : 'How to Enjoy Korean Food on a Diet: Delicious and Healthy Tips',
       description: language === 'ko' 
