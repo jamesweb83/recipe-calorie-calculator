@@ -3,7 +3,7 @@ const translations = {
   en: {
     title: 'Recipe Calorie Calculator',
     description: 'Calculate calories for your recipe ingredients quickly and accurately. Analyze nutrition information for any dish or meal.',
-    recipeLabel: 'Enter your recipe ingredients and quantities:',
+    recipeLabel: 'Enter your recipe ingredients and quantities',
     placeholder: `Example:
 Rice 2 cups
 Chicken breast 200g
@@ -68,7 +68,7 @@ Soy sauce 2 tbsp
   ko: {
     title: '레시피 칼로리 계산기',
     description: '레시피의 칼로리를 빠르고 정확하게 계산합니다. 모든 요리나 식사의 영양 정보를 분석해보세요.',
-    recipeLabel: '레시피 재료와 양을 입력하세요. 혹은 레시피 이름만 넣어주세요.:',
+    recipeLabel: '레시피 재료와 양을 입력하세요. 혹은 레시피 이름만 넣어주세요.',
     placeholder: `예시:
 쌀 2컵
 닭가슴살 200g
