@@ -242,7 +242,21 @@ const koreanContent = {
   asianCookingTechniquesTitle: "저칼로리 식사를 위한 아시아 요리 기술",
   wokTechnique: "최소한의 기름으로 빠른 볶음에 웍(냄비)을 사용하세요",
   vegetableTechnique: "모든 식사에 더 많은 채소를 포함하세요",
-  portionTechnique: "여러 접시의 작은 포션을 제공하세요"
+  portionTechnique: "여러 접시의 작은 포션을 제공하세요",
+  brothTechnique: "크림 기반 소스 대신 국물과 가벼운 소스를 사용하세요",
+  proteinTechnique: "붉은 고기보다는 생선과 식물성 단백질을 선택하세요",
+  
+  mealPlanningTitle: "식단 계획 팁",
+  vegetableFocus: "고기가 아닌 채소를 중심으로 식사를 구성하세요",
+  riceComplement: "밥을 주식이 아닌 보조 식품으로 활용하세요",
+  fermentedFoods: "맛과 장 건강을 위해 발효 식품을 포함하세요",
+  communalEating: "자연스러운 양 조절을 위해 공동 식사 스타일을 채택하세요",
+  
+  // Conclusion
+  conclusionTitle: "결론",
+  conclusionText: "아시아식과 서양식 식단은 각각의 고유한 특징이 있지만, 전통적인 아시아식 식단은 작은 포션, 적은 가공식품, 적은 기름을 사용하는 조리법, 채소와 해산물 위주의 식단으로 인해 일반적으로 더 낮은 칼로리 섭취를 보입니다. 서양식 식단을 따르는 사람들도 아시아 요리의 일부 원칙을 도입함으로써 영양가 있고 만족스러운 식사를 유지하면서 칼로리 섭취를 줄일 수 있습니다.",
+  
+  calculatorPromo: "레시피 칼로리 계산기를 사용하여 아시아식과 서양식 요리의 칼로리 함량을 분석하고 영양 목표에 맞는 현명한 식단 선택을 하세요."
 };
 
 export default function AsianVsWesternDiet() {
