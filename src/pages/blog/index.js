@@ -7,10 +7,19 @@ import Footer from '../../components/Footer';
 import SEOHead from '../../components/SEOHead';
 
 export default function BlogIndex() {
-  const { language } = useLanguage(); // Remove unused 'texts'
+  const { language } = useLanguage();
   
   // Blog posts data
   const blogPosts = [
+    {
+      id: 'accurate-calorie-counting',
+      title: language === 'ko' ? '정확한 칼로리 계산이 당신의 식단을 어떻게 바꿀 수 있는가' : 'How Accurate Calorie Counting Can Transform Your Diet',
+      description: language === 'ko' 
+        ? '정확한 칼로리 추적이 어떻게 당신의 식단을 혁신하고 건강 목표 달성을 도울 수 있는지 알아보세요.' 
+        : 'Discover how precise calorie tracking can revolutionize your diet and help you achieve your health goals with our accurate calorie calculator.',
+      date: '2024-03-25',
+      formattedDate: language === 'ko' ? '2024년 3월 25일' : 'March 25, 2024'
+    },
     {
       id: 'low-calorie-dinner-recipes',
       title: language === 'ko' ? '다이어트를 위한 최고의 저칼로리 저녁 레시피' : 'The Best Low-Calorie Dinner Recipes for Weight Loss',
@@ -38,7 +47,6 @@ export default function BlogIndex() {
       date: '2024-03-03',
       formattedDate: language === 'ko' ? '2024년 3월 3일' : 'March 3, 2024'
     }
-    // Add more blog posts here as they are created
   ];
   
   const blogTitle = language === 'ko' ? '레시피 칼로리 블로그' : 'Recipe Calorie Blog';
