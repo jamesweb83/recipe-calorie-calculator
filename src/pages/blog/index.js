@@ -12,13 +12,22 @@ export default function BlogIndex() {
   // Blog posts data
   const blogPosts = [
     {
+      id: 'korean-food-on-diet',
+      title: language === 'ko' ? '다이어트하면서 한식 즐기기: 맛있고 건강한 팁' : 'How to Enjoy Korean Food on a Diet: Delicious and Healthy Tips',
+      description: language === 'ko' 
+        ? '다이어트 목표를 유지하면서 한식을 즐기는 실용적인 팁과 건강한 대안을 알아보세요.' 
+        : 'Learn how to enjoy Korean cuisine while maintaining your diet goals with these practical tips and healthy alternatives.',
+      date: '2024-03-15',
+      formattedDate: language === 'ko' ? '2024년 3월 15일' : 'March 15, 2024'
+    },
+    {
       id: 'asian-vs-western-diet',
       title: language === 'ko' ? '아시아식 vs. 서양식 다이어트: 칼로리 비교' : 'Asian vs. Western Diet: Calorie Comparison',
       description: language === 'ko' 
         ? '아시아식과 서양식 식단의 칼로리 함량, 음식 구성, 조리 방법, 그리고 건강에 미치는 영향에 대해 비교해봅니다.' 
         : 'Compare the caloric content of Asian and Western diets, their key differences in food composition, cooking methods, and health implications.',
-      date: '2025-03-03',
-      formattedDate: language === 'ko' ? '2025년 3월 3일' : 'March 3, 2025'
+      date: '2024-03-03',
+      formattedDate: language === 'ko' ? '2024년 3월 3일' : 'March 3, 2024'
     }
     // Add more blog posts here as they are created
   ];
