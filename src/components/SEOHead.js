@@ -3,7 +3,7 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { useLanguage } from '../contexts/LanguageContext';
 
-export default function SEOHead() {
+export default function SEOHead({ customTitle, customDescription, customCanonicalPath }) {
   const { texts, language } = useLanguage();
   const router = useRouter();
   
@@ -12,20 +12,23 @@ export default function SEOHead() {
   const siteName = 'Recipe Calorie Calculator';
   
   // 현재 페이지에 따른 타이틀 및 설명 설정
-  let seoTitle = texts.title;
-  let seoDescription = texts.description;
+  let seoTitle = customTitle || texts.title;
+  let seoDescription = customDescription || texts.description;
   
-  // 현재 URL 경로에 따라 메타 데이터 조정
-  if (router.pathname === '/faq') {
-    seoTitle = `${texts.faq} - ${texts.title}`;
-    seoDescription = `${texts.frequentlyAskedQuestions} ${texts.description}`;
-  } else if (router.pathname === '/privacy-policy') {
-    seoTitle = `${texts.privacyPolicy} - ${texts.title}`;
-    seoDescription = `${texts.privacyPolicyTitle} ${texts.title}`;
+  // Custom title/description이 없을 경우 현재 URL 경로에 따라 메타 데이터 조정
+  if (!customTitle) {
+    if (router.pathname === '/faq') {
+      seoTitle = `${texts.faq} - ${texts.title}`;
+      seoDescription = `${texts.frequentlyAskedQuestions} ${texts.description}`;
+    } else if (router.pathname === '/privacy-policy') {
+      seoTitle = `${texts.privacyPolicy} - ${texts.title}`;
+      seoDescription = `${texts.privacyPolicyTitle} ${texts.title}`;
+    }
   }
   
   // 현재 전체 URL
-  const canonicalUrl = `${baseUrl}${router.pathname}`;
+  const canonicalPath = customCanonicalPath || router.pathname;
+  const canonicalUrl = `${baseUrl}${canonicalPath}`;
   
   // OG 이미지 URL - 절대 경로 사용
   const ogImageUrl = `${baseUrl}/og-image.jpg`;

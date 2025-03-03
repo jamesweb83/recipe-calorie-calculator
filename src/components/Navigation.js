@@ -7,6 +7,9 @@ export default function Navigation() {
   const { texts, language, changeLanguage } = useLanguage();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
+  // Add blog translation to texts object
+  const blogText = language === 'ko' ? '블로그' : 'Blog';
+
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
   };
@@ -47,6 +50,9 @@ export default function Navigation() {
             {/* 네비게이션 링크 */}
             <Link href="/" className="text-gray-700 hover:text-indigo-600">
               {texts.home}
+            </Link>
+            <Link href="/blog" className="text-gray-700 hover:text-indigo-600">
+              {blogText}
             </Link>
             <Link href="/faq" className="text-gray-700 hover:text-indigo-600">
               {texts.faq}
@@ -115,6 +121,13 @@ export default function Navigation() {
                 onClick={() => setMobileMenuOpen(false)}
               >
                 {texts.home}
+              </Link>
+              <Link 
+                href="/blog" 
+                className="text-gray-700 hover:bg-gray-100 py-2 px-4 block"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                {blogText}
               </Link>
               <Link 
                 href="/faq" 

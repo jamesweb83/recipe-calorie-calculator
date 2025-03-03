@@ -26,6 +26,7 @@ Soy sauce 2 tbsp
     maxCharError: 'Recipe cannot exceed 300 characters.',
     // 새로 추가된 번역
     home: 'Home',
+    blog: 'Blog', // Added blog translation
     faq: 'FAQ',
     privacyPolicy: 'Privacy Policy',
     allRightsReserved: 'All Rights Reserved.',
@@ -91,6 +92,7 @@ Soy sauce 2 tbsp
     maxCharError: '레시피는 300자를 초과할 수 없습니다.',
     // 새로 추가된 번역
     home: '홈',
+    blog: '블로그', // Added blog translation
     faq: '자주 묻는 질문',
     privacyPolicy: '개인정보처리방침',
     allRightsReserved: '모든 권리 보유.',
