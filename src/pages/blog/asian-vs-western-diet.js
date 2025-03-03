@@ -478,4 +478,4 @@ const koreanContent = {
   asianCookingTechniquesTitle: "저칼로리 식사를 위한 아시아 요리 기술",
   wokTechnique: "최소한의 기름으로 빠른 볶음에 웍(냄비)을 사용하세요",
   vegetableTechnique: "모든 식사에 더 많은 채소를 포함하세요",
-  portionTechnique: "여러 접시의 작은 포션을 제공하세요",
+  portionTechnique: "여러 접시의 작은 포션을 제공하세요"};
