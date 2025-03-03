@@ -433,7 +433,9 @@ export default function AsianVsWesternDiet() {
               <p className="mb-4 text-indigo-700 font-medium">{content.calculatorPromo}</p>
               <div className="text-center">
                 <a
-                  href="/calculator"
+                  href="https://recipe-calorie-calculator.vercel.app/calculator"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-block px-6 py-3 bg-indigo-600 text-white font-semibold rounded-lg hover:bg-indigo-700 transition-colors duration-200"
                 >
                   {language === 'ko' ? '칼로리 계산기 사용하기' : 'Use Calorie Calculator'}
