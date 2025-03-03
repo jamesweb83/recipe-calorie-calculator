@@ -28,24 +28,20 @@ export default function Navigation() {
             {texts.title}
           </Link>
 
-          {/* 중앙 정렬된 네비게이션 링크 */}
-          <div className="hidden md:flex items-center justify-center flex-1 mx-4">
-            <div className="flex space-x-8">
-              <Link href="/" className="text-gray-700 hover:text-indigo-600 font-medium">
-                {texts.home}
-              </Link>
-              <Link href="/blog" className="text-gray-700 hover:text-indigo-600 font-medium">
-                {blogText}
-              </Link>
-              <Link href="/faq" className="text-gray-700 hover:text-indigo-600 font-medium">
-                {texts.faq}
-              </Link>
-            </div>
-          </div>
+          {/* 오른쪽 정렬된 네비게이션 링크와 언어 선택 */}
+          <div className="hidden md:flex items-center space-x-8">
+            <Link href="/" className="text-gray-700 hover:text-indigo-600 font-medium">
+              {texts.home}
+            </Link>
+            <Link href="/blog" className="text-gray-700 hover:text-indigo-600 font-medium">
+              {blogText}
+            </Link>
+            <Link href="/faq" className="text-gray-700 hover:text-indigo-600 font-medium">
+              {texts.faq}
+            </Link>
 
-          {/* 언어 선택 드롭다운 */}
-          <div className="flex items-center">
-            <div className="relative hidden md:block">
+            {/* 언어 선택 드롭다운 */}
+            <div className="relative">
               <button
                 onClick={toggleLangDropdown}
                 className="flex items-center space-x-1 px-3 py-2 rounded-md bg-gray-100 hover:bg-gray-200"
@@ -88,34 +84,34 @@ export default function Navigation() {
                 </div>
               )}
             </div>
-
-            {/* 모바일 메뉴 버튼 */}
-            <button onClick={toggleMobileMenu} className="md:hidden ml-4 text-gray-700">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                {mobileMenuOpen ? (
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M6 18L18 6M6 6l12 12"
-                  />
-                ) : (
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M4 6h16M4 12h16M4 18h16"
-                  />
-                )}
-              </svg>
-            </button>
           </div>
+
+          {/* 모바일 메뉴 버튼 */}
+          <button onClick={toggleMobileMenu} className="md:hidden text-gray-700">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              {mobileMenuOpen ? (
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              ) : (
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              )}
+            </svg>
+          </button>
         </div>
 
         {/* 모바일 메뉴 */}
