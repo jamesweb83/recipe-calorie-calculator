@@ -23,27 +23,28 @@ export default function Navigation() {
     <nav className="bg-white shadow-md">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-4">
-          <div className="flex items-center space-x-6">
-            <Link href="/" className="text-xl font-bold text-indigo-600">
-              {texts.title}
-            </Link>
-            
-            {/* 네비게이션 링크 */}
-            <div className="hidden md:flex space-x-6">
-              <Link href="/" className="text-gray-700 hover:text-indigo-600">
+          {/* 로고 */}
+          <Link href="/" className="text-xl font-bold text-indigo-600">
+            {texts.title}
+          </Link>
+
+          {/* 중앙 정렬된 네비게이션 링크 */}
+          <div className="hidden md:flex items-center justify-center flex-1 mx-4">
+            <div className="flex space-x-8">
+              <Link href="/" className="text-gray-700 hover:text-indigo-600 font-medium">
                 {texts.home}
               </Link>
-              <Link href="/blog" className="text-gray-700 hover:text-indigo-600">
+              <Link href="/blog" className="text-gray-700 hover:text-indigo-600 font-medium">
                 {blogText}
               </Link>
-              <Link href="/faq" className="text-gray-700 hover:text-indigo-600">
+              <Link href="/faq" className="text-gray-700 hover:text-indigo-600 font-medium">
                 {texts.faq}
               </Link>
             </div>
           </div>
 
+          {/* 언어 선택 드롭다운 */}
           <div className="flex items-center">
-            {/* 언어 선택 드롭다운 */}
             <div className="relative hidden md:block">
               <button
                 onClick={toggleLangDropdown}
@@ -123,21 +124,21 @@ export default function Navigation() {
             <div className="flex flex-col space-y-2">
               <Link 
                 href="/" 
-                className="text-gray-700 hover:bg-gray-100 py-2 px-4 block"
+                className="text-gray-700 hover:bg-gray-100 py-2 px-4 block text-center"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 {texts.home}
               </Link>
               <Link 
                 href="/blog" 
-                className="text-gray-700 hover:bg-gray-100 py-2 px-4 block"
+                className="text-gray-700 hover:bg-gray-100 py-2 px-4 block text-center"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 {blogText}
               </Link>
               <Link 
                 href="/faq" 
-                className="text-gray-700 hover:bg-gray-100 py-2 px-4 block"
+                className="text-gray-700 hover:bg-gray-100 py-2 px-4 block text-center"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 {texts.faq}
@@ -150,7 +151,7 @@ export default function Navigation() {
                     changeLanguage('ko');
                     setMobileMenuOpen(false);
                   }}
-                  className={`w-full text-left px-4 py-2 ${
+                  className={`w-full text-center px-4 py-2 ${
                     language === 'ko' ? 'text-indigo-600' : 'text-gray-700'
                   }`}
                 >
@@ -161,7 +162,7 @@ export default function Navigation() {
                     changeLanguage('en');
                     setMobileMenuOpen(false);
                   }}
-                  className={`w-full text-left px-4 py-2 ${
+                  className={`w-full text-center px-4 py-2 ${
                     language === 'en' ? 'text-indigo-600' : 'text-gray-700'
                   }`}
                 >
