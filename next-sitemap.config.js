@@ -13,6 +13,7 @@ module.exports = {
     // 변경 빈도 및 우선순위 설정
     changefreq: 'weekly',
     priority: 0.7,
-    sitemapSize: 5000,
-    exclude: ['/404']
+    sitemapSize: 50000,
+    exclude: ['/404'],
+    generateIndexSitemap: false
   } 
