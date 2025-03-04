@@ -9,7 +9,7 @@ export default function Home() {
     <LanguageProvider>
       <Navigation />
 
-      <main className={styles.main + " mt-16"}>
+      <main className={styles.main + " mt-20"}>
         <HomePage />
       </main>
     </LanguageProvider>
