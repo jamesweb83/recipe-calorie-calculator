@@ -12,6 +12,15 @@ export default function BlogIndex() {
   // Blog posts data
   const blogPosts = [
     {
+      id: 'comfort-foods-calories',
+      title: language === 'ko' ? '당신이 좋아하는 위안 음식의 칼로리는 얼마일까?' : 'How Many Calories Are in Your Favorite Comfort Foods?',
+      description: language === 'ko' 
+        ? '맥앤치즈, 프라이드 치킨, 피자 등 인기 위안 음식의 칼로리를 분석하고, 더 스마트하게 즐기는 방법을 알아보세요.' 
+        : 'Discover the calorie content of popular comfort foods like mac and cheese, fried chicken, and pizza, and learn how to enjoy them smarter.',
+      date: '2024-03-26',
+      formattedDate: language === 'ko' ? '2024년 3월 26일' : 'March 26, 2024'
+    },
+    {
       id: 'accurate-calorie-counting',
       title: language === 'ko' ? '정확한 칼로리 계산이 당신의 식단을 어떻게 바꿀 수 있는가' : 'How Accurate Calorie Counting Can Transform Your Diet',
       description: language === 'ko' 
