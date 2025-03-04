@@ -141,6 +141,33 @@ export default function BlogIndex() {
       date: '2025-02-20',
       formattedDate: language === 'ko' ? '2025년 2월 20일' : 'February 20, 2025',
       image: 'https://pfucce7ttunjmfqz.public.blob.vercel-storage.com/kpop_idol_diet_header-Ceer0ojQEFdW0YPVZ5CBDBz9B8GQ89.jpg'
+    },
+    {
+      id: 'high-protein-vegetarian-meals',
+      title: {
+        en: "High-Protein, Low-Calorie Meal Ideas for Vegetarians",
+        ko: "채식주의자를 위한 고단백 저칼로리 식단 아이디어"
+      },
+      description: {
+        en: "Discover delicious high-protein, low-calorie vegetarian meals that keep you full and fit. Perfect for plant-based eaters looking to maintain a healthy diet.",
+        ko: "채식주의자를 위한 맛있고 건강한 고단백 저칼로리 식단 아이디어를 만나보세요."
+      },
+      date: "2025-03-05",
+      image: "https://pfucce7ttunjmfqz.public.blob.vercel-storage.com/tofu-veggie-scramble-illustration-noBiYedv9jVEq1I72YezURRVCVqU0O.jpg"
+    },
+    {
+      id: 'fridge-staple-meals',
+      title: {
+        en: "30 Meals Under 500 Calories Using Fridge Staples",
+        ko: "냉장고 재료로 만드는 500kcal 이하 한 끼 식사 30가지"
+      },
+      description: {
+        en: "Discover 30 delicious, low-calorie meals under 500 calories using common fridge staples. Simple, healthy, and budget-friendly recipes that make the most of what you have.",
+        ko: "냉장고에 있는 기본 재료로 만드는 500칼로리 이하의 맛있고 건강한 식사 30가지를 만나보세요."
+      },
+      date: "2025-03-06",
+      formattedDate: language === 'ko' ? '2025년 3월 6일' : 'March 6, 2025',
+      image: "https://pfucce7ttunjmfqz.public.blob.vercel-storage.com/turkey-lettuce-wraps-illustration-NcD8dCE6eNowc84kIO9aISZFIPGjLC.jpg"
     }
   ].sort((a, b) => new Date(b.date) - new Date(a.date));
   
