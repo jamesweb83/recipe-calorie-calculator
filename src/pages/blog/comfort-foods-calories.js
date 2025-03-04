@@ -38,7 +38,9 @@ export default function ComfortFoodsCalories() {
             </div>
           </header>
 
-          // ... rest of the existing code ...
+          <div className="prose prose-lg max-w-none prose-indigo">
+            {/* rest of the existing code */}
+          </div>
         </article>
       </main>
 
