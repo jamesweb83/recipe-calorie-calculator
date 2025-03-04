@@ -50,7 +50,7 @@ export default function BlogIndex() {
         : 'Learn how to enjoy Korean cuisine while maintaining your diet goals with these practical tips and healthy alternatives.',
       date: '2024-03-15',
       formattedDate: language === 'ko' ? '2024년 3월 15일' : 'March 15, 2024',
-      image: 'https://pfucce7ttunjmfqz.public.blob.vercel-storage.com/asian-vs-western-diet-calorie-illustration-UtiTOp5wa6vupGKMOuRHH8ZXH693Qw.jpg'
+      image: 'https://pfucce7ttunjmfqz.public.blob.vercel-storage.com/korean-food-on-diet-illustration-nPMghLyM5EF9zOQilAL7Gk2Ys2VWql.jpg'
     },
     {
       id: 'asian-vs-western-diet',
