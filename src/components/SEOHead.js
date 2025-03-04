@@ -58,23 +58,15 @@ export default function SEOHead({ customTitle, customDescription, customCanonica
       <title>{seoTitle}</title>
       <meta name="description" content={seoDescription} />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <meta httpEquiv="content-language" content={language} />
-      
-      {/* 폰트 */}
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-      <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Noto+Sans:wght@300;400;500;700&display=swap" rel="stylesheet" />
-      
-      {/* 구글 서치 콘솔 인증 */}
+      <meta name="language" content={language} />
       <meta name="google-site-verification" content="AOCF6hHdjOONIgyr0T5HSqwz4SY6udgEgXudh9dTgvU" />
       
-      {/* 파비콘 및 앱 아이콘 */}
+      {/* favicon */}
       <link rel="icon" href="https://pfucce7ttunjmfqz.public.blob.vercel-storage.com/jamesweb_Favicon-lsVzaviQT7zVQqCvYOTBEDmN6PhPe4.jpg" />
       <link rel="apple-touch-icon" href="https://pfucce7ttunjmfqz.public.blob.vercel-storage.com/jamesweb_Favicon-lsVzaviQT7zVQqCvYOTBEDmN6PhPe4.jpg" />
       <link rel="icon" type="image/png" href="https://pfucce7ttunjmfqz.public.blob.vercel-storage.com/jamesweb_Favicon-lsVzaviQT7zVQqCvYOTBEDmN6PhPe4.jpg" />
-      <link rel="manifest" href="/site.webmanifest" />
       
-      {/* 캐노니컬 URL */}
+      {/* canonical URL */}
       <link rel="canonical" href={canonicalUrl} />
       
       {/* 오픈 그래프 태그 */}
