@@ -90,9 +90,13 @@ export default function BlogIndex() {
 
           <div className="grid gap-8 md:grid-cols-1">
             {blogPosts.map((post) => (
-              <div key={post.id} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-                <Link href={`/blog/${post.id}`} className="block">
-                  <div className="relative h-48 md:h-64">
+              <Link
+                key={post.id}
+                href={`/blog/${post.id}`}
+                className="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200 overflow-hidden"
+              >
+                <div className="flex flex-col md:flex-row">
+                  <div className="relative w-full md:w-48 h-48 md:h-auto">
                     <Image
                       src={post.image}
                       alt={post.title}
@@ -101,22 +105,19 @@ export default function BlogIndex() {
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     />
                   </div>
-                  <div className="p-6">
-                    <h2 className="text-2xl font-semibold text-indigo-600 mb-2">
+                  <div className="p-6 flex-1">
+                    <h2 className="text-xl font-semibold text-gray-900 mb-2">
                       {post.title}
                     </h2>
-                    <p className="text-gray-500 text-sm mb-3">
-                      {post.formattedDate}
-                    </p>
-                    <p className="text-gray-700">
+                    <p className="text-gray-600 mb-4">
                       {post.description}
                     </p>
-                    <div className="mt-4 text-indigo-600 font-medium">
-                      {language === 'ko' ? '더 읽기 →' : 'Read more →'}
-                    </div>
+                    <p className="text-sm text-gray-500">
+                      {post.formattedDate}
+                    </p>
                   </div>
-                </Link>
-              </div>
+                </div>
+              </Link>
             ))}
           </div>
         </div>
