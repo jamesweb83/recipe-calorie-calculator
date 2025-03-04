@@ -152,7 +152,8 @@ export default function BlogIndex() {
         en: "Discover delicious high-protein, low-calorie vegetarian meals that keep you full and fit. Perfect for plant-based eaters looking to maintain a healthy diet.",
         ko: "채식주의자를 위한 맛있고 건강한 고단백 저칼로리 식단 아이디어를 만나보세요."
       },
-      date: "2025-03-05",
+      date: "2025-02-19",
+      formattedDate: language === 'ko' ? '2025년 2월 19일' : 'February 19, 2025',
       image: "https://pfucce7ttunjmfqz.public.blob.vercel-storage.com/tofu-veggie-scramble-illustration-noBiYedv9jVEq1I72YezURRVCVqU0O.jpg"
     },
     {
@@ -165,8 +166,8 @@ export default function BlogIndex() {
         en: "Discover 30 delicious, low-calorie meals under 500 calories using common fridge staples. Simple, healthy, and budget-friendly recipes that make the most of what you have.",
         ko: "냉장고에 있는 기본 재료로 만드는 500칼로리 이하의 맛있고 건강한 식사 30가지를 만나보세요."
       },
-      date: "2025-03-06",
-      formattedDate: language === 'ko' ? '2025년 3월 6일' : 'March 6, 2025',
+      date: "2025-02-18",
+      formattedDate: language === 'ko' ? '2025년 2월 18일' : 'February 18, 2025',
       image: "https://pfucce7ttunjmfqz.public.blob.vercel-storage.com/turkey-lettuce-wraps-illustration-NcD8dCE6eNowc84kIO9aISZFIPGjLC.jpg"
     }
   ].sort((a, b) => new Date(b.date) - new Date(a.date));
