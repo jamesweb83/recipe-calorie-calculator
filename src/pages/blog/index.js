@@ -121,6 +121,26 @@ export default function BlogIndex() {
       date: '2024-04-01',
       formattedDate: language === 'ko' ? '2024년 4월 1일' : 'April 1, 2024',
       image: 'https://pfucce7ttunjmfqz.public.blob.vercel-storage.com/kelp-noodle-stir-fry-illustration-7OfhH5xJWLnnRn6iXWc2jK1fy7s9It.jpg'
+    },
+    {
+      id: 'netflix-snacks',
+      title: language === 'ko' ? '넷플릭스 보면서 먹기 좋은 100칼로리 이하 간식 레시피' : '10 Netflix Snack Recipes Under 100 Calories',
+      description: language === 'ko' 
+        ? '넷플릭스 정주행할 때 부담 없는 100칼로리 이하의 맛있는 간식 레시피 10가지를 소개합니다. 칼로리 걱정 없이 즐겨보세요!' 
+        : 'Discover 10 delicious snack recipes under 100 calories perfect for Netflix binge-watching. Enjoy guilt-free snacking!',
+      date: '2024-04-02',
+      formattedDate: language === 'ko' ? '2024년 4월 2일' : 'April 2, 2024',
+      image: 'https://pfucce7ttunjmfqz.public.blob.vercel-storage.com/konjac-jelly-illustration-QWWy7M4tSQ05fotfZ1PkC3AD7NOq7t.jpg'
+    },
+    {
+      id: 'kpop-idol-diet',
+      title: language === 'ko' ? 'K-팝 아이돌 다이어트 식단: 칼로리 계산으로 따라 해보기' : 'K-pop Idol Diet Plan: Follow Along with Calorie Counting',
+      description: language === 'ko' 
+        ? 'K-팝 아이돌들의 완벽한 몸매 비결을 알아보고, 과학적인 칼로리 계산 방법으로 여러분의 다이어트에 적용해보세요.' 
+        : 'Discover the secrets behind K-pop idols\' perfect physiques and learn how to apply their scientific calorie counting methods to your diet.',
+      date: '2024-04-03',
+      formattedDate: language === 'ko' ? '2024년 4월 3일' : 'April 3, 2024',
+      image: 'https://pfucce7ttunjmfqz.public.blob.vercel-storage.com/kpop_idol_diet_header-Ceer0ojQEFdW0YPVZ5CBDBz9B8GQ89.jpg'
     }
   ].sort((a, b) => new Date(b.date) - new Date(a.date));
   
