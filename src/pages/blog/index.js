@@ -13,6 +13,16 @@ export default function BlogIndex() {
   // Blog posts data
   const blogPosts = [
     {
+      id: 'clever-ingredient-swaps',
+      title: language === 'ko' ? '식재료 대체로 칼로리 줄이는 꿀팁 (예: 버터 대신 아보카도)' : 'Clever Ingredient Swaps to Cut Calories (e.g., Avocado Instead of Butter)',
+      description: language === 'ko' 
+        ? '칼로리를 줄인다고 맛을 포기할 필요는 없습니다. 영리한 식재료 대체를 통해 좋아하는 음식을 더 적은 칼로리로, 더 건강하게 즐길 수 있습니다.' 
+        : 'Reducing calories doesn\'t mean sacrificing flavor. By making smart ingredient swaps, you can enjoy your favorite meals with fewer calories and more nutrition.',
+      date: '2024-03-28',
+      formattedDate: language === 'ko' ? '2024년 3월 28일' : 'March 28, 2024',
+      image: 'https://pfucce7ttunjmfqz.public.blob.vercel-storage.com/ingredient-swaps-cut-calories-illustration-kOq12M0pcPMhbApuKC0acJfFDCgm6d.jpg'
+    },
+    {
       id: 'balanced-meal-under-500',
       title: language === 'ko' ? '500칼로리 이하의 균형 잡힌 식사 만드는 법' : 'How to Create a Balanced Meal Under 500 Calories',
       description: language === 'ko' 
