@@ -13,6 +13,16 @@ export default function BlogIndex() {
   // Blog posts data
   const blogPosts = [
     {
+      id: 'under-300-calorie-breakfast',
+      title: language === 'ko' ? '아침 식사로 좋은 300칼로리 미만 레시피 모음' : 'A Collection of Under 300-Calorie Breakfast Recipes',
+      description: language === 'ko' 
+        ? '건강하고 저칼로리 아침 식사로 하루를 시작하는 건 지루할 필요가 없습니다. 300칼로리 미만인 이 레시피들은 빠르고 맛있으며, 아침을 활기차게 만들어줄 영양소로 가득합니다.' 
+        : 'Starting your day with a healthy, low-calorie breakfast doesn\'t have to be boring. These under 300-calorie recipes are quick, delicious, and packed with nutrients to keep you energized.',
+      date: '2024-03-29',
+      formattedDate: language === 'ko' ? '2024년 3월 29일' : 'March 29, 2024',
+      image: 'https://pfucce7ttunjmfqz.public.blob.vercel-storage.com/under-300-calorie-breakfast-illustration-SRIO6R0xOvOkgvojEjLj98Uq9ixnv9.jpg'
+    },
+    {
       id: 'clever-ingredient-swaps',
       title: language === 'ko' ? '식재료 대체로 칼로리 줄이는 꿀팁 (예: 버터 대신 아보카도)' : 'Clever Ingredient Swaps to Cut Calories (e.g., Avocado Instead of Butter)',
       description: language === 'ko' 
@@ -83,16 +93,36 @@ export default function BlogIndex() {
       image: 'https://pfucce7ttunjmfqz.public.blob.vercel-storage.com/asian-vs-western-diet-calorie-illustration-UtiTOp5wa6vupGKMOuRHH8ZXH693Qw.jpg'
     },
     {
-      id: 'under-300-calorie-breakfast',
-      title: language === 'ko' ? '아침 식사로 좋은 300칼로리 미만 레시피 모음' : 'A Collection of Under 300-Calorie Breakfast Recipes',
+      id: 'instagram-worthy-brunch',
+      title: language === 'ko' ? '인스타 감성 저칼로리 브런치 레시피 Top 5' : 'Top 5 Instagram-Worthy Low-Calorie Brunch Recipes',
       description: language === 'ko' 
-        ? '건강하고 저칼로리 아침 식사로 하루를 시작하는 건 지루할 필요가 없습니다. 300칼로리 미만인 이 레시피들은 빠르고 맛있으며, 아침을 활기차게 만들어줄 영양소로 가득합니다.' 
-        : 'Starting your day with a healthy, low-calorie breakfast doesn\'t have to be boring. These under 300-calorie recipes are quick, delicious, and packed with nutrients to keep you energized.',
-      date: '2024-03-29',
-      formattedDate: language === 'ko' ? '2024년 3월 29일' : 'March 29, 2024',
-      image: 'https://pfucce7ttunjmfqz.public.blob.vercel-storage.com/under-300-calorie-breakfast-illustration-SRIO6R0xOvOkgvojEjLj98Uq9ixnv9.jpg'
+        ? '브런치는 사진 찍어 공유하기 좋은 식사지만, 칼로리 폭탄일 필요는 없습니다. 400칼로리 미만인 이 Top 5 저칼로리 브런치 레시피는 맛있고 예쁘기까지 해서 인스타 피드를 빛내줄 거예요.' 
+        : 'Brunch is the perfect meal to snap and share, but it doesn\'t have to break your calorie bank. These top 5 low-calorie brunch recipes are as photogenic as they are delicious, all under 400 calories.',
+      date: '2024-03-30',
+      formattedDate: language === 'ko' ? '2024년 3월 30일' : 'March 30, 2024',
+      image: 'https://pfucce7ttunjmfqz.public.blob.vercel-storage.com/berry-chia-pudding-illustration-EBBx2NUUIVQ9kqXPwvqBnWnyO3NlTO.jpg'
+    },
+    {
+      id: 'tiktok-5min-recipe-challenge',
+      title: language === 'ko' ? '틱톡에서 핫한 5분 저칼로리 레시피 챌린지' : 'TikTok-Popular 5-Minute Low-Calorie Recipe Challenge',
+      description: language === 'ko' 
+        ? '틱톡에서 5분 안에 완성되는 저칼로리 요리가 대세예요! 이 챌린지는 바쁜 일상 속에서 건강하고 재미있는 레시피를 선사합니다.' 
+        : 'TikTok is buzzing with quick, low-calorie dishes you can whip up in just 5 minutes! This challenge brings you fun, healthy recipes that fit your busy life.',
+      date: '2024-03-31',
+      formattedDate: language === 'ko' ? '2024년 3월 31일' : 'March 31, 2024',
+      image: 'https://pfucce7ttunjmfqz.public.blob.vercel-storage.com/chia-seed-energy-shot-illustration-xyAHN0qBQy9EFmHUFF6abnZnEnZJ8Y.jpg'
+    },
+    {
+      id: '2025-diet-trends',
+      title: language === 'ko' ? '2025년 다이어트 트렌드: 칼로리 줄이는 최신 식재료와 레시피' : '2025 Diet Trends: Latest Low-Calorie Ingredients and Recipes',
+      description: language === 'ko' 
+        ? '2025년이 다가오며 다이어트 트렌드는 칼로리를 줄이면서도 맛과 영양을 유지하는 방향으로 진화하고 있습니다. 혁신적인 식재료와 창의적인 레시피를 소개합니다.' 
+        : 'As we step into 2025, diet trends are evolving with a focus on cutting calories while keeping meals tasty and nutritious. Discover innovative ingredients and creative recipes.',
+      date: '2024-04-01',
+      formattedDate: language === 'ko' ? '2024년 4월 1일' : 'April 1, 2024',
+      image: 'https://pfucce7ttunjmfqz.public.blob.vercel-storage.com/kelp-noodle-stir-fry-illustration-7OfhH5xJWLnnRn6iXWc2jK1fy7s9It.jpg'
     }
-  ];
+  ].sort((a, b) => new Date(b.date) - new Date(a.date));
   
   const blogTitle = language === 'ko' ? '레시피 칼로리 블로그' : 'Recipe Calorie Blog';
   const blogDescription = language === 'ko' 
