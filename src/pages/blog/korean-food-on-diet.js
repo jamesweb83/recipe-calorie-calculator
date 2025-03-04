@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import { useLanguage } from '../../contexts/LanguageContext';
 import Navigation from '../../components/Navigation';
 import Footer from '../../components/Footer';
@@ -222,6 +223,15 @@ export default function KoreanFoodOnDiet() {
             <p className="text-gray-600 italic">
               {content.publishedDate}
             </p>
+            <div className="relative w-full h-[400px] mt-8 rounded-lg overflow-hidden">
+              <Image
+                src="https://pfucce7ttunjmfqz.public.blob.vercel-storage.com/korean-food-on-diet-illustration-nPMghLyM5EF9zOQilAL7Gk2Ys2VWql.jpg"
+                alt={content.title}
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              />
+            </div>
           </header>
 
           <div className="prose prose-lg max-w-none prose-indigo">
