@@ -81,6 +81,16 @@ export default function BlogIndex() {
       date: '2024-03-03',
       formattedDate: language === 'ko' ? '2024년 3월 3일' : 'March 3, 2024',
       image: 'https://pfucce7ttunjmfqz.public.blob.vercel-storage.com/asian-vs-western-diet-calorie-illustration-UtiTOp5wa6vupGKMOuRHH8ZXH693Qw.jpg'
+    },
+    {
+      id: 'under-300-calorie-breakfast',
+      title: language === 'ko' ? '아침 식사로 좋은 300칼로리 미만 레시피 모음' : 'A Collection of Under 300-Calorie Breakfast Recipes',
+      description: language === 'ko' 
+        ? '건강하고 저칼로리 아침 식사로 하루를 시작하는 건 지루할 필요가 없습니다. 300칼로리 미만인 이 레시피들은 빠르고 맛있으며, 아침을 활기차게 만들어줄 영양소로 가득합니다.' 
+        : 'Starting your day with a healthy, low-calorie breakfast doesn\'t have to be boring. These under 300-calorie recipes are quick, delicious, and packed with nutrients to keep you energized.',
+      date: '2024-03-29',
+      formattedDate: language === 'ko' ? '2024년 3월 29일' : 'March 29, 2024',
+      image: 'https://pfucce7ttunjmfqz.public.blob.vercel-storage.com/under-300-calorie-breakfast-illustration-SRIO6R0xOvOkgvojEjLj98Uq9ixnv9.jpg'
     }
   ];
   
