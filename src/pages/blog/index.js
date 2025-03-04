@@ -13,6 +13,16 @@ export default function BlogIndex() {
   // Blog posts data
   const blogPosts = [
     {
+      id: 'balanced-meal-under-500',
+      title: language === 'ko' ? '500칼로리 이하의 균형 잡힌 식사 만드는 법' : 'How to Create a Balanced Meal Under 500 Calories',
+      description: language === 'ko' 
+        ? '단백질, 탄수화물, 건강한 지방을 적절히 조합해 500칼로리 이하의 만족스러운 식사를 만드는 방법을 알아보세요.' 
+        : 'Learn how to create a satisfying meal under 500 calories with the right mix of protein, carbs, and healthy fats.',
+      date: '2024-03-27',
+      formattedDate: language === 'ko' ? '2024년 3월 27일' : 'March 27, 2024',
+      image: 'https://pfucce7ttunjmfqz.public.blob.vercel-storage.com/balanced-meal-under-500-calories-illustration-KyD5keWpuLFNp8FLAsQECRs2sslBSB.jpg'
+    },
+    {
       id: 'comfort-foods-calories',
       title: language === 'ko' ? '당신이 좋아하는 위안 음식의 칼로리는 얼마일까?' : 'How Many Calories Are in Your Favorite Comfort Foods?',
       description: language === 'ko' 
