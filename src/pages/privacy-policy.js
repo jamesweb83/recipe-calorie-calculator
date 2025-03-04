@@ -16,7 +16,7 @@ export default function PrivacyPolicy() {
       <SEOHead />
       <Navigation />
 
-      <main className="container mx-auto px-4 py-8">
+      <main className="container mx-auto px-4 py-8 mt-16">
         <div className="max-w-3xl mx-auto bg-white p-8 rounded-lg shadow-md">
           <h1 className="text-3xl font-bold text-indigo-600 mb-4">
             {texts.privacyPolicyTitle}

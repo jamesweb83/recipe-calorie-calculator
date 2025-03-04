@@ -37,7 +37,7 @@ export default function FAQ() {
       <SEOHead />
       <Navigation />
 
-      <main className="container mx-auto px-4 py-8">
+      <main className="container mx-auto px-4 py-8 mt-16">
         <h1 className="text-3xl font-bold text-center text-indigo-600 mb-8">
           {texts.frequentlyAskedQuestions}
         </h1>
