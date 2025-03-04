@@ -31,7 +31,7 @@ export default function SEOHead({ customTitle, customDescription, customCanonica
   const canonicalUrl = `${baseUrl}${canonicalPath}`;
   
   // OG 이미지 URL - 절대 경로 사용
-  const ogImageUrl = `${baseUrl}/og-image.jpg`;
+  const ogImageUrl = "https://pfucce7ttunjmfqz.public.blob.vercel-storage.com/jamesweb_opengrafh-EqVKnB2jhs0rC4GraZQ6fUGvA58873.jpg";
   
   // 구조화된 데이터 (Schema.org)
   const structuredData = {
@@ -62,8 +62,9 @@ export default function SEOHead({ customTitle, customDescription, customCanonica
       <meta name="google-site-verification" content="AOCF6hHdjOONIgyr0T5HSqwz4SY6udgEgXudh9dTgvU" />
       
       {/* 파비콘 및 앱 아이콘 */}
-      <link rel="icon" href="/favicon.ico" />
-      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+      <link rel="icon" href="https://pfucce7ttunjmfqz.public.blob.vercel-storage.com/jamesweb_Favicon-lsVzaviQT7zVQqCvYOTBEDmN6PhPe4.jpg" />
+      <link rel="apple-touch-icon" href="https://pfucce7ttunjmfqz.public.blob.vercel-storage.com/jamesweb_Favicon-lsVzaviQT7zVQqCvYOTBEDmN6PhPe4.jpg" />
+      <link rel="icon" type="image/png" href="https://pfucce7ttunjmfqz.public.blob.vercel-storage.com/jamesweb_Favicon-lsVzaviQT7zVQqCvYOTBEDmN6PhPe4.jpg" />
       
       {/* 언어 설정 */}
       <meta httpEquiv="content-language" content={language} />

@@ -19,10 +19,7 @@ function MyApp({ Component, pageProps }) {
           crossOrigin="anonymous"
         />
         
-        {/* favicon 추가 */}
-        <link rel="icon" href="https://pfucce7ttunjmfqz.public.blob.vercel-storage.com/jamesweb_Favicon-lsVzaviQT7zVQqCvYOTBEDmN6PhPe4.jpg" />
-        <link rel="apple-touch-icon" href="https://pfucce7ttunjmfqz.public.blob.vercel-storage.com/jamesweb_Favicon-lsVzaviQT7zVQqCvYOTBEDmN6PhPe4.jpg" />
-        <link rel="icon" type="image/png" href="https://pfucce7ttunjmfqz.public.blob.vercel-storage.com/jamesweb_Favicon-lsVzaviQT7zVQqCvYOTBEDmN6PhPe4.jpg" />
+        {/* 파비콘 설정은 SEOHead 컴포넌트에서 관리 */}
         <link rel="manifest" href="/site.webmanifest" />
       </Head>
 

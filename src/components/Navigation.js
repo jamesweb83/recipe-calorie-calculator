@@ -26,7 +26,7 @@ export default function Navigation() {
         <div className="flex justify-between items-center py-4">
           {/* 로고 */}
           <Link href="/" className="flex items-center">
-            <div className="relative w-32 h-8">
+            <div className="relative w-40 h-10">
               <Image
                 src="https://pfucce7ttunjmfqz.public.blob.vercel-storage.com/jamesweb_logo-r5EhTcjz803XYNTEoAHai4a0VkNYGb.jpg"
                 alt="Jamesweb Logo"
