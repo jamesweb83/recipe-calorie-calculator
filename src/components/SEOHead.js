@@ -58,6 +58,9 @@ export default function SEOHead({ customTitle, customDescription, customCanonica
       <meta name="description" content={seoDescription} />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       
+      {/* 구글 서치 콘솔 인증 */}
+      <meta name="google-site-verification" content="AOCF6hHdjOONIgyr0T5HSqwz4SY6udgEgXudh9dTgvU" />
+      
       {/* 파비콘 및 앱 아이콘 */}
       <link rel="icon" href="/favicon.ico" />
       <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
