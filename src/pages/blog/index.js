@@ -206,7 +206,7 @@ export default function BlogIndex() {
                   <div className="relative w-full h-48">
                     <Image
                       src={post.image}
-                      alt={post.title}
+                      alt={typeof post.title === 'object' ? post.title[language] : post.title}
                       fill
                       className="object-cover"
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -214,10 +214,10 @@ export default function BlogIndex() {
                   </div>
                   <div className="p-4">
                     <h2 className="text-lg font-semibold text-gray-900 mb-2 line-clamp-2">
-                      {post.title}
+                      {typeof post.title === 'object' ? post.title[language] : post.title}
                     </h2>
                     <p className="text-sm text-gray-600 mb-2 line-clamp-2">
-                      {post.description}
+                      {typeof post.description === 'object' ? post.description[language] : post.description}
                     </p>
                     <p className="text-xs text-gray-500">
                       {post.formattedDate}
