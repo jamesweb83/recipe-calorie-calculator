@@ -30,7 +30,7 @@ export default function SEOHead({ customTitle, customDescription, customCanonica
   const canonicalPath = customCanonicalPath || router.pathname;
   const canonicalUrl = `${baseUrl}${canonicalPath}`;
   
-  // OG 이미지 URL - 절대 경로 사용
+  // OG 이미지 URL
   const ogImageUrl = "https://pfucce7ttunjmfqz.public.blob.vercel-storage.com/jamesweb_opengrafh-EqVKnB2jhs0rC4GraZQ6fUGvA58873.jpg";
   
   // 구조화된 데이터 (Schema.org)
@@ -54,9 +54,16 @@ export default function SEOHead({ customTitle, customDescription, customCanonica
 
   return (
     <Head>
+      {/* 기본 메타 태그 */}
       <title>{seoTitle}</title>
       <meta name="description" content={seoDescription} />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta httpEquiv="content-language" content={language} />
+      
+      {/* 폰트 */}
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Noto+Sans:wght@300;400;500;700&display=swap" rel="stylesheet" />
       
       {/* 구글 서치 콘솔 인증 */}
       <meta name="google-site-verification" content="AOCF6hHdjOONIgyr0T5HSqwz4SY6udgEgXudh9dTgvU" />
@@ -65,9 +72,9 @@ export default function SEOHead({ customTitle, customDescription, customCanonica
       <link rel="icon" href="https://pfucce7ttunjmfqz.public.blob.vercel-storage.com/jamesweb_Favicon-lsVzaviQT7zVQqCvYOTBEDmN6PhPe4.jpg" />
       <link rel="apple-touch-icon" href="https://pfucce7ttunjmfqz.public.blob.vercel-storage.com/jamesweb_Favicon-lsVzaviQT7zVQqCvYOTBEDmN6PhPe4.jpg" />
       <link rel="icon" type="image/png" href="https://pfucce7ttunjmfqz.public.blob.vercel-storage.com/jamesweb_Favicon-lsVzaviQT7zVQqCvYOTBEDmN6PhPe4.jpg" />
+      <link rel="manifest" href="/site.webmanifest" />
       
-      {/* 언어 설정 */}
-      <meta httpEquiv="content-language" content={language} />
+      {/* 캐노니컬 URL */}
       <link rel="canonical" href={canonicalUrl} />
       
       {/* 오픈 그래프 태그 */}
