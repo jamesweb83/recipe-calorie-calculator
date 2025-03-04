@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { useLanguage } from '../contexts/LanguageContext';
+import Image from 'next/image';
 
 export default function Navigation() {
   const { texts, language, changeLanguage } = useLanguage();
@@ -24,8 +25,16 @@ export default function Navigation() {
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-4">
           {/* 로고 */}
-          <Link href="/" className="text-xl font-bold text-indigo-600">
-            {texts.title}
+          <Link href="/" className="flex items-center">
+            <div className="relative w-32 h-8">
+              <Image
+                src="https://pfucce7ttunjmfqz.public.blob.vercel-storage.com/jamesweb_logo-r5EhTcjz803XYNTEoAHai4a0VkNYGb.jpg"
+                alt="Jamesweb Logo"
+                fill
+                className="object-contain"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              />
+            </div>
           </Link>
 
           {/* 오른쪽 정렬된 네비게이션 링크와 언어 선택 */}
