@@ -98,15 +98,15 @@ export default function BlogIndex() {
             {blogDescription}
           </p>
 
-          <div className="grid gap-8 md:grid-cols-1">
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {blogPosts.map((post) => (
               <Link
                 key={post.id}
                 href={`/blog/${post.id}`}
                 className="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200 overflow-hidden"
               >
-                <div className="flex flex-col md:flex-row">
-                  <div className="relative w-full md:w-48 h-48 md:h-auto">
+                <div className="flex flex-col">
+                  <div className="relative w-full h-48">
                     <Image
                       src={post.image}
                       alt={post.title}
@@ -115,14 +115,14 @@ export default function BlogIndex() {
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     />
                   </div>
-                  <div className="p-6 flex-1">
-                    <h2 className="text-xl font-semibold text-gray-900 mb-2">
+                  <div className="p-4">
+                    <h2 className="text-lg font-semibold text-gray-900 mb-2 line-clamp-2">
                       {post.title}
                     </h2>
-                    <p className="text-gray-600 mb-4">
+                    <p className="text-sm text-gray-600 mb-2 line-clamp-2">
                       {post.description}
                     </p>
-                    <p className="text-sm text-gray-500">
+                    <p className="text-xs text-gray-500">
                       {post.formattedDate}
                     </p>
                   </div>
