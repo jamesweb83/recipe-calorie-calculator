@@ -224,8 +224,8 @@ export default function BlogIndex() {
                       {post.formattedDate}
                     </p>
                   </div>
-                </div>
-              </Link>
+                  </div>
+                </Link>
             ))}
           </div>
         </div>
