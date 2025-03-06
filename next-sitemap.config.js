@@ -10,7 +10,7 @@ module.exports = {
         }
       ],
       additionalSitemaps: [
-        `${process.env.NEXT_PUBLIC_SITE_URL || 'https://recipe-calorie-calculator.vercel.app'}/sitemap-index.xml`,
+        // 추가 사이트맵이 필요한 경우 여기에 추가
       ],
     },
     // 변경 빈도 및 우선순위 설정
@@ -27,4 +27,13 @@ module.exports = {
         lastmod: new Date().toISOString().split('T')[0],
       }
     },
+    // 사이트맵 XSL 스타일시트 설정
+    sitemapXslUrl: '/sitemap.xsl',
+    sitemapIndexXslUrl: '/sitemap-index.xsl',
+    // 사이트맵 파일 이름 설정
+    outDir: 'public',
+    sourceDir: '.next',
+    // 사이트맵 생성 후 처리
+    generateIndexSitemap: true,
+    autoLastmod: true,
   } 
