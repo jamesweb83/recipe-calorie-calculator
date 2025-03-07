@@ -6,4 +6,4 @@ Allow: /
 Host: https://recipe-calorie-calculator.vercel.app
 
 # Sitemaps
-Sitemap: https://recipe-calorie-calculator.vercel.app/sitemap.xml
+Sitemap: https://recipe-calorie-calculator.vercel.app/main-sitemap.xml

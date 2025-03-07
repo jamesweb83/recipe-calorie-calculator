@@ -32,5 +32,7 @@ module.exports = {
     sourceDir: '.next',
     // 사이트맵 인덱스 파일 생성 비활성화
     generateIndexSitemap: false,
+    // 사이트맵 기본 파일 이름 변경
+    sitemapBaseFileName: 'main-sitemap',
     autoLastmod: true,
   } 
