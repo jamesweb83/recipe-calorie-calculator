@@ -1,4 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<sitemap><loc>https://recipe-calorie-calculator.vercel.app/sitemap-0.xml</loc></sitemap>
-</sitemapindex>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+<url><loc>https://recipe-calorie-calculator.vercel.app</loc><lastmod>2025-03-07</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://recipe-calorie-calculator.vercel.app/blog</loc><lastmod>2025-03-07</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://recipe-calorie-calculator.vercel.app/blog/2025-diet-trends</loc><lastmod>2025-03-07</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://recipe-calorie-calculator.vercel.app/blog/accurate-calorie-counting</loc><lastmod>2025-03-07</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://recipe-calorie-calculator.vercel.app/blog/asian-vs-western-diet</loc><lastmod>2025-03-07</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://recipe-calorie-calculator.vercel.app/blog/balanced-meal-under-500</loc><lastmod>2025-03-07</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://recipe-calorie-calculator.vercel.app/blog/clever-ingredient-swaps</loc><lastmod>2025-03-07</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://recipe-calorie-calculator.vercel.app/blog/comfort-foods-calories</loc><lastmod>2025-03-07</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://recipe-calorie-calculator.vercel.app/blog/fridge-staple-meals</loc><lastmod>2025-03-07</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://recipe-calorie-calculator.vercel.app/blog/high-protein-vegetarian-meals</loc><lastmod>2025-03-07</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://recipe-calorie-calculator.vercel.app/blog/instagram-worthy-brunch</loc><lastmod>2025-03-07</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://recipe-calorie-calculator.vercel.app/blog/korean-food-on-diet</loc><lastmod>2025-03-07</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://recipe-calorie-calculator.vercel.app/blog/kpop-idol-diet</loc><lastmod>2025-03-07</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://recipe-calorie-calculator.vercel.app/blog/low-calorie-dinner-recipes</loc><lastmod>2025-03-07</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://recipe-calorie-calculator.vercel.app/blog/netflix-snacks</loc><lastmod>2025-03-07</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://recipe-calorie-calculator.vercel.app/blog/tiktok-5min-recipe-challenge</loc><lastmod>2025-03-07</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://recipe-calorie-calculator.vercel.app/blog/under-300-calorie-breakfast</loc><lastmod>2025-03-07</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://recipe-calorie-calculator.vercel.app/faq</loc><lastmod>2025-03-07</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://recipe-calorie-calculator.vercel.app/privacy-policy</loc><lastmod>2025-03-07</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+</urlset>

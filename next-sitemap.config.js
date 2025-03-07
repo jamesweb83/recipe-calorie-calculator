@@ -30,6 +30,7 @@ module.exports = {
     // 사이트맵 파일 이름 설정
     outDir: 'public',
     sourceDir: '.next',
-    generateIndexSitemap: true,
+    // 사이트맵 인덱스 파일 생성 비활성화
+    generateIndexSitemap: false,
     autoLastmod: true,
   } 
